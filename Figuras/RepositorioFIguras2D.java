@@ -1,5 +1,6 @@
 package Figuras;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -39,6 +40,21 @@ public class RepositorioFIguras2D {
         public int getTamanho(){
             return figuras.size();
         }
+        public void ordenar(){
+            Collections.sort(figuras);
+        }
+        public void listarFiguras(){
+            if(figuras.isEmpty()){
+                System.out.println("Repositorio vazio.");
+            }else{
+                for (int i = 0; i < figuras.size(); i++) {
+                    System.out.println("Indice: " + i + ": " + figuras.get(i).getTipo() + " area: " + figuras.get(i).calcularArea());
+
+                }
+            }
+        }
+
+
 
 
     }
